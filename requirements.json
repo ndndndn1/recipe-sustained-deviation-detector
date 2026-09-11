@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "project_id": "recipe-drift-evidence-v1",
+  "purpose": {
+    "status": "hypothesis",
+    "problem": "서로 다른 레시피의 측정값과 단발성 센서 스파이크가 섞이면 운영자가 검토할 불필요 경보가 증가할 수 있다.",
+    "hypothesis": "같은 데이터에서 단발 잡음 오탐이 줄지 않거나 지속 편차 검출 지연이 3개 표본을 초과하면 개선 가설 기각",
+    "scenario": "합성 레시피 센서 스트림과 경보 판단; 장비 제어와 실제 수율 예측은 제외",
+    "mechanism": "레시피별 기준값과 연속 초과 조건을 사용하여 지속 편차와 단발 잡음을 구분한다.",
+    "limitations": "실제 공정 데이터, 측정 단위와 허용 편차 미확인. 수율 향상이나 제품 신뢰성 인증을 주장하지 않음"
+  },
+  "sources": [
+    {
+      "id": "SRC-1",
+      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125818",
+      "retrieved_at": "2026-09-11T06:13:43.377000+00:00"
+    },
+    {
+      "id": "SRC-2",
+      "url": "https://www.dbhitek.com/kr/index",
+      "retrieved_at": "2026-09-11T06:10:47.239000+00:00"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "OBJ-001",
+      "outcome": "지속 편차 검출을 유지하면서 단발 잡음 경보 감소",
+      "source_ids": [
+        "SRC-1",
+        "SRC-2"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "kind": "required",
+      "objective_id": "OBJ-001",
+      "acceptance": "고정된 세 workload에서 불필요 경보를 각각 10건 이상 감소",
+      "operating_conditions": "2 recipes x 300 observations; isolated spikes before t=200; sustained shift from t=200",
+      "implementation": [
+        "solution.py"
+      ],
+      "checks": [
+        {
+          "command": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "kind": "required",
+      "objective_id": "OBJ-001",
+      "acceptance": "각 레시피에서 지속 편차를 3개 표본 이내에 검출, 상태 상한 3",
+      "operating_conditions": "2 recipes x 300 observations; isolated spikes before t=200; sustained shift from t=200",
+      "implementation": [
+        "solution.py"
+      ],
+      "checks": [
+        {
+          "command": [
+            "python",
+            "tests/conformance.py"
+          ],
+          "metric": "transitions_checked",
+          "operator": ">=",
+          "threshold": 8
+        }
+      ]
+    }
+  ],
+  "formal": {
+    "file": "Specification.lean",
+    "theorems": [
+      "Drift.bounded",
+      "Drift.reset",
+      "Drift.no_early_alarm"
+    ],
+    "witness_theorems": [
+      "Drift.reachable_alarm"
+    ],
+    "requirement_mapping": {
+      "REQ-001": [
+        "Drift.no_early_alarm"
+      ],
+      "REQ-002": [
+        "Drift.bounded",
+        "Drift.reset",
+        "Drift.no_early_alarm"
+      ]
+    }
+  },
+  "experiments": [
+    {
+      "id": "EXP-001",
+      "objective_id": "OBJ-001",
+      "metric": "false_alarms",
+      "unit": "count",
+      "conditions": "2 recipes x 300 observations; isolated spikes before t=200; sustained shift from t=200",
+      "dataset_hash": "d46198c69167bf85659aec8e2ebb6bcb38c8d388f594690a3937bbbb45ef301f",
+      "baseline_description": "레시피별 단일 샘플 임계치 경보; 회사의 현재 방식이라는 주장은 하지 않음",
+      "level": "synthetic",
+      "direction": "lower",
+      "minimum_absolute_improvement": 10,
+      "seeds": [
+        11,
+        29,
+        47
+      ],
+      "baseline_command": [
+        "python",
+        "baseline/workload.py"
+      ],
+      "command": [
+        "python",
+        "benchmark.py"
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "requirement_id": "REQ-001",
+      "defect": "Remove persistence threshold",
+      "command": [
+        "python",
+        "tests/negative.py"
+      ]
+    }
+  ],
+  "model_conformance": {
+    "command": [
+      "python",
+      "tests/conformance.py"
+    ]
+  }
+}
