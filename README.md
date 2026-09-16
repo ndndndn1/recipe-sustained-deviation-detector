@@ -1,4 +1,6 @@
-# Recipe drift evidence
+# Recipe sustained deviation detector and microvia quality planner
+
+New module: [Microvia Plating Quality and Experiment Planner](microvia/README.md), with unit-aware calculations, quality analysis and bounded experiment design.
 
 A runnable experiment for recipe-specific sustained-deviation triage. It explores a
 hypothesis relevant to manufacturing-data analysis: isolated sensor spikes can
