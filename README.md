@@ -58,3 +58,7 @@ docker run --rm --network none --read-only --tmpfs /tmp recipe-drift-evidence
 
 The Dockerfile pins its base and patched runtime package. The comparison output reports
 every seed; `RESULTS.json`, when included, is a recorded run rather than a forecast.
+
+## Microvia references
+
+See the [paper references and their actual use](microvia/README.md#references--참고문헌) and [literature evidence register](microvia/LITERATURE.md). Full-text evidence, abstract-only references and unread follow-up literature are labelled separately.

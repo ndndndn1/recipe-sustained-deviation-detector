@@ -54,3 +54,24 @@ docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-
 ```
 
 The existing runtime image must already be present. This mount uses the current source rather than the image's old source.
+
+## References / 참고문헌
+
+### 설계에 참조한 자료
+
+1. **Mark Lefebvre, George Allardyce, Masaru Seita, Hideki Tsuchida, Masaru Kusaka, and Shinjiro Hayashi.** “Copper Electroplating Technology for Microvia Filling.” *IPC Printed Circuits Expo / APEX / Designers Summit*, 2004, paper S23-2. [원문 PDF](https://www.electronics.org/system/files/technical_resource/E18%26S23-2.pdf).
+   - 열람: 계획 단계에서 본문 확인. DOI는 확인하지 못했다.
+   - 반영: 공정 변수 선정, 동일 형상별 비교, 높이 충진율과 단면적 충진율 구분. 특히 Figure 1, Figures 2–4 및 Tables 1–2를 참고했다.
+   - 해당 논문의 욕조 조성을 현재 FCBGA 양산 조건으로 사용하거나 실험 결과를 재현했다고 주장하지 않는다.
+
+2. **Thomas P. Moffat, Daniel Wheeler, and Daniel Josell.** “Superconformal Film Growth.” *202nd Meeting of The Electrochemical Society*, 2002. [NIST 공식 서지 및 초록](https://www.nist.gov/publications/superconformal-film-growth).
+   - 열람: 공식 초록만 확인. 논문 전체와 DOI는 미확인이다.
+   - 반영: 첨가제 피복과 형상 변화의 관계를 정성적 한계 설명에 사용했다. 평면 석출량 계산을 비아 충진 형상 예측으로 해석하지 않는다.
+   - CEAC 모델 구현이나 논문 수치 재현의 근거로 사용하지 않는다.
+
+### 후속 검토 문헌: 구현 근거에 포함하지 않음
+
+3. “Fast Filling of Microvia by Pre-Settling Particles and Following Cu Electroplating.” *Nanomaterials* **12**(10), 1699, 2022. [DOI: 10.3390/nano12101699](https://doi.org/10.3390/nano12101699), [PubMed 서지](https://pubmed.ncbi.nlm.nih.gov/35630921/).
+   - 서지와 초록 검색 결과만 확인했다. 본문은 미열람이며 수치나 공정 조건을 구현에 사용하지 않았다.
+
+상세한 주장, 반증 실험 및 열람 상태는 [문헌 근거표](LITERATURE.md)에 기록했다. `example.csv`와 최적화 벤치마크는 직접 만든 합성 데이터이며 위 논문의 실험 데이터가 아니다. Faraday 계산은 일반 전기화학 전하량 관계를 구현한 것으로, 위 논문을 해당 코드나 상수의 직접 출처로 표시하지 않는다.
