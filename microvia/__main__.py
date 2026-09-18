@@ -18,6 +18,7 @@ def main():
             "analyze",
             "plan-experiments",
             "benchmark",
+            "robust-benchmark",
             "report",
             "mask",
         ],
@@ -27,7 +28,11 @@ def main():
     parser.add_argument("--lot")
     parser.add_argument("--geometry")
     args = parser.parse_args()
-    if args.command == "benchmark":
+    if args.command == "robust-benchmark":
+        from .robust_benchmark import run as robust_run
+
+        result = robust_run()
+    elif args.command == "benchmark":
         result = run()
     elif args.command == "mask":
         data = json.loads(args.input.read_text())

@@ -75,3 +75,7 @@ The existing runtime image must already be present. This mount uses the current 
    - 서지와 초록 검색 결과만 확인했다. 본문은 미열람이며 수치나 공정 조건을 구현에 사용하지 않았다.
 
 상세한 주장, 반증 실험 및 열람 상태는 [문헌 근거표](LITERATURE.md)에 기록했다. `example.csv`와 최적화 벤치마크는 직접 만든 합성 데이터이며 위 논문의 실험 데이터가 아니다. Faraday 계산은 일반 전기화학 전하량 관계를 구현한 것으로, 위 논문을 해당 코드나 상수의 직접 출처로 표시하지 않는다.
+
+## Robustness review (v2)
+
+[Benchmark review and failure analysis](BENCHMARK_REVIEW.md), [frozen evaluation protocol](BENCHMARK_PROTOCOL_V2.md), [numerical summary](ROBUST_RESULTS.json). Run `python -m microvia robust-benchmark`. The original adaptive result is not a deployment recommendation; noisy held-out evaluation and a separate ablation identify final feasibility margin as the main improvement. No claim of state-of-the-art or factory validation is made.

@@ -1,0 +1,79 @@
+{
+  "evaluation": {
+    "protocol": "robust-v2",
+    "candidate_selected_on_development": "conservative",
+    "baseline_selected_on_development": "uniform",
+    "summary": {
+      "uniform": {
+        "loss": 0.17232072965492126,
+        "violation_rate": 0.145,
+        "abstention_rate": 0
+      },
+      "random": {
+        "loss": 0.170680852867345,
+        "violation_rate": 0.14,
+        "abstention_rate": 0.005
+      },
+      "adaptive": {
+        "loss": 0.22308778137998247,
+        "violation_rate": 0.215,
+        "abstention_rate": 0
+      },
+      "conservative": {
+        "loss": 0.0692084746547619,
+        "violation_rate": 0.045,
+        "abstention_rate": 0
+      }
+    },
+    "paired_seed_cluster_gain_ci95": [
+      0.05907161272861703,
+      0.1502480038784379
+    ],
+    "promotion_passed": true,
+    "deployment_decision": "research_only_no_factory_validation",
+    "per_family": {
+      "smooth": {
+        "uniform": 0.16307401574283795,
+        "random": 0.1298904430424393,
+        "adaptive": 0.1656273863898005,
+        "conservative": 0.04682589159824101
+      },
+      "interaction": {
+        "uniform": 0.12926686089842643,
+        "random": 0.08598768911565868,
+        "adaptive": 0.15064301529872912,
+        "conservative": 0.030455646822942283
+      },
+      "narrow": {
+        "uniform": 0.15346515792076051,
+        "random": 0.14883117170372437,
+        "adaptive": 0.16907947167176693,
+        "conservative": 0.021398561429380826
+      },
+      "drift": {
+        "uniform": 0.24347688405766021,
+        "random": 0.3180141076075576,
+        "adaptive": 0.40700125215963334,
+        "conservative": 0.17815379876848353
+      }
+    }
+  },
+  "diagnostic_ablation": {
+    "uniform_margin_0": {
+      "loss": 0.22035396512850608,
+      "violation": 0.2
+    },
+    "uniform_margin_0.08": {
+      "loss": 0.07532587844078412,
+      "violation": 0.0375
+    },
+    "conservative_margin_0": {
+      "loss": 0.22484403496344907,
+      "violation": 0.2125
+    },
+    "conservative_margin_0.08": {
+      "loss": 0.0988959167411422,
+      "violation": 0.0375
+    }
+  }
+}

@@ -78,7 +78,7 @@ def run():
         "runs": results,
         "median_regret_minutes": medians,
         "target_met": passed,
-        "default_method": "adaptive"
+        "synthetic_v1_winner_not_deployment_default": "adaptive"
         if passed
         else min(("uniform", "random"), key=medians.get),
         "physical_process_validation": "not_run",
