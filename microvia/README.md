@@ -2,6 +2,27 @@
 
 마이크로비아 도금 품질 분석 및 실험 설계 도구. 공정 조건과 검사 결과를 연결하고 다음 확인 실험을 제시한다. 실제 FCBGA 생산 수율 또는 현장 설비 성능은 검증하지 않았다.
 
+## 현재 잘 되는 것과 안 되는 것
+
+현재 수준은 **실행 가능한 연구용 분석 도구**다. 아래 상태는 코드와 기록된 테스트 기준이며 실제 공장 성능을 뜻하지 않는다.
+
+| 구분 | 현재 상태 | 적용 범위 또는 제한 |
+|---|---|---|
+| CSV 검증 | 구현 및 테스트 통과 | 필수값, 유한수, 비율, 중복, 로트별 시간 순서와 헤더 검사. 헤더가 올바르더라도 값이 잘못된 단위로 입력된 것은 자동 식별하지 못함 |
+| 구리 석출량 계산 | 해석 사례 검증 통과 | 일정 전류효율을 가정한 평면 Faraday 계산. 첨가제 반응, 이동경계, 실제 충진 형상은 계산하지 않음 |
+| 단면 마스크 면적 계산 | 알려진 마스크 검증 통과 | 사용자가 제공한 마스크와 픽셀 보정값 필요. 이미지 자동 분할과 3D 내부 보이드 검출은 미구현 |
+| 로트/형상별 분석 | 구현 및 테스트 통과 | 전류와 충진율의 관측 연관성. 불량 원인 확정이나 교란 제거는 하지 못함 |
+| 다음 실험 설계 | 제한적 구현 | 관측 전류 범위의 하한/중간/상한과 반복 횟수 제안. 실행 순서의 실제 무작위 배정, 욕조 조건 자동 통제, 최적 생산 레시피는 미구현 |
+| 최적화 벤치마크 | 합성 평가 실행 완료 | v2 개발 320회, 평가 800회, 별도 진단 320회. 실제 분석/실험 설계 CLI와 최적화 알고리즘은 아직 연결되지 않음 |
+| 한영 보고서 | 생성 및 입력 이스케이프 확인 | 분석과 가정 출력. 벤치마크 전체 결과의 보고서 자동 통합은 미구현 |
+| Lean 검증 | Boolean 조건 정리 4개 통과 | 물리 모델, 실험 안전성, 전체 Python 코드 또는 양산 성능을 증명하지 않음 |
+| 컨테이너 | 기존 이미지에서 오프라인 실행 확인 | 신규 이미지 빌드는 패키지 서버 연결 실패. 깨끗한 환경의 독립 빌드 완료로 표시하지 않음 |
+| 실제 공정 개선 | 미검증 | 실제 반복 측정, 욕조 보정, ABF 공정 적합성, 수율/원가 개선 근거 없음 |
+
+**기존 적응형 방법이 더 좋다는 주장은 유지하지 않는다.** v2 평가에서 품질 미달 추천은 기존 적응형 21.5%, 균등 탐색 14.5%, 보수적 방법 4.5%였다. 추가 분리 실험에서는 같은 품질 여유 기준을 적용한 균등 탐색이 더 낮은 손실을 보였다. 따라서 복잡한 탐색의 우월성은 입증되지 않았고, 고정 여유값 0.08도 실제 측정 오차에 맞게 보정된 값이 아니다.
+
+[다음 코드 반영 계획](IMPLEMENTATION_PLAN_V3.md)은 **미구현 계획**이다. [평가 리뷰](BENCHMARK_REVIEW.md)와 [수치 결과](ROBUST_RESULTS.json)는 실행 완료 기록이다. 기능 체크리스트 90%를 공정 성숙도나 채용 적합도 점수로 해석하지 않는다.
+
 ## Run / 실행
 
 Python 3.12 standard library, no third-party runtime packages:
@@ -21,7 +42,7 @@ The example is synthetic, not a literature dataset. `example.csv` header defines
 
 ## What is implemented
 
-- Reject/quarantine missing values, nonfinite inputs, inconsistent units (header), impossible ratios, duplicate samples and reversed lot timestamps.
+- Reject/quarantine missing values, nonfinite inputs, unexpected unit-labelled headers (not incorrectly scaled values under correct headers), impossible ratios, duplicate samples and reversed lot timestamps.
 - Faraday planar copper balance, cylindrical empty-volume calculation and idealized bottom-only time. No moving boundary or additive transport solver.
 - Stratify by lot and exact geometry; report association with current density and a matched, randomized follow-up experiment. Associations are not causal attribution.
 - Recommend a replicated current contrast inside the observed range for one lot/shape only. Production recipe recommendation always abstains because no bath-specific calibration exists.
