@@ -1,0 +1,273 @@
+{
+  "version": 3,
+  "development": [
+    {
+      "config": [
+        "uniform",
+        "raw",
+        false
+      ],
+      "loss": 0.43953231441670076
+    },
+    {
+      "config": [
+        "uniform",
+        "raw",
+        true
+      ],
+      "loss": 0.4065144508796302
+    },
+    {
+      "config": [
+        "uniform",
+        "fixed-margin",
+        false
+      ],
+      "loss": 0.3406876413424234
+    },
+    {
+      "config": [
+        "uniform",
+        "fixed-margin",
+        true
+      ],
+      "loss": 0.3665489106186323
+    },
+    {
+      "config": [
+        "uniform",
+        "calibrated-margin",
+        false
+      ],
+      "loss": 0.30605463756410145
+    },
+    {
+      "config": [
+        "uniform",
+        "calibrated-margin",
+        true
+      ],
+      "loss": 0.33472596157125284
+    },
+    {
+      "config": [
+        "random",
+        "raw",
+        false
+      ],
+      "loss": 0.4403476713573783
+    },
+    {
+      "config": [
+        "random",
+        "raw",
+        true
+      ],
+      "loss": 0.3747319152890931
+    },
+    {
+      "config": [
+        "random",
+        "fixed-margin",
+        false
+      ],
+      "loss": 0.3328997405016605
+    },
+    {
+      "config": [
+        "random",
+        "fixed-margin",
+        true
+      ],
+      "loss": 0.3832874171975897
+    },
+    {
+      "config": [
+        "random",
+        "calibrated-margin",
+        false
+      ],
+      "loss": 0.32524957596783216
+    },
+    {
+      "config": [
+        "random",
+        "calibrated-margin",
+        true
+      ],
+      "loss": 0.3739170834923758
+    },
+    {
+      "config": [
+        "adaptive",
+        "raw",
+        false
+      ],
+      "loss": 0.5429905545270565
+    },
+    {
+      "config": [
+        "adaptive",
+        "raw",
+        true
+      ],
+      "loss": 0.5195250764136762
+    },
+    {
+      "config": [
+        "adaptive",
+        "fixed-margin",
+        false
+      ],
+      "loss": 0.3621885380113011
+    },
+    {
+      "config": [
+        "adaptive",
+        "fixed-margin",
+        true
+      ],
+      "loss": 0.3666810899845304
+    },
+    {
+      "config": [
+        "adaptive",
+        "calibrated-margin",
+        false
+      ],
+      "loss": 0.3246651874691423
+    },
+    {
+      "config": [
+        "adaptive",
+        "calibrated-margin",
+        true
+      ],
+      "loss": 0.3304703164627917
+    },
+    {
+      "config": [
+        "conservative",
+        "raw",
+        false
+      ],
+      "loss": 0.4333688888110192
+    },
+    {
+      "config": [
+        "conservative",
+        "raw",
+        true
+      ],
+      "loss": 0.4274248415792719
+    },
+    {
+      "config": [
+        "conservative",
+        "fixed-margin",
+        false
+      ],
+      "loss": 0.29226830384782454
+    },
+    {
+      "config": [
+        "conservative",
+        "fixed-margin",
+        true
+      ],
+      "loss": 0.2880321716614897
+    },
+    {
+      "config": [
+        "conservative",
+        "calibrated-margin",
+        false
+      ],
+      "loss": 0.293000479328125
+    },
+    {
+      "config": [
+        "conservative",
+        "calibrated-margin",
+        true
+      ],
+      "loss": 0.2887233811429116
+    }
+  ],
+  "baseline": [
+    "uniform",
+    "calibrated-margin",
+    false
+  ],
+  "candidate": [
+    "conservative",
+    "fixed-margin",
+    true
+  ],
+  "summary": {
+    "baseline": {
+      "loss": 0.3153527553674201,
+      "violation": 0.155,
+      "abstention": 0.13125,
+      "feasible_found": 0.75,
+      "query_violation_rate": 0.7653125,
+      "seconds": 0.005469668347504921
+    },
+    "candidate": {
+      "loss": 0.3267926162881909,
+      "violation": 0.165,
+      "abstention": 0.14,
+      "feasible_found": 0.7425,
+      "query_violation_rate": 0.6251875,
+      "seconds": 0.017390316636301577
+    }
+  },
+  "gain_ci95": [
+    -0.03291360588052329,
+    0.008845607663511784
+  ],
+  "promote": false,
+  "evaluation_errors": 0,
+  "deployment": "research only; operational default remains bounded-design",
+  "calibration_cost": "40 independent synthetic reference pairs per family, external to 20-query budget; same availability across arms",
+  "per_family": {
+    "smooth": {
+      "baseline": 0.05851133844479312,
+      "candidate": 0.04352871797831285
+    },
+    "interaction": {
+      "baseline": 0.046605390059601286,
+      "candidate": 0.06333814731654425
+    },
+    "narrow": {
+      "baseline": 0.08839129868459775,
+      "candidate": 0.06770025099813655
+    },
+    "drift": {
+      "baseline": 0.21071303193852692,
+      "candidate": 0.15884107086561394
+    },
+    "heteroscedastic": {
+      "baseline": 0.07277324391760998,
+      "candidate": 0.07075503295264066
+    },
+    "bias": {
+      "baseline": 0.045827739894231515,
+      "candidate": 0.21017771019427914
+    },
+    "late_shift": {
+      "baseline": 1.0,
+      "candidate": 1.0
+    },
+    "infeasible": {
+      "baseline": 1.0,
+      "candidate": 1.0
+    }
+  },
+  "counts": {
+    "development": 1920,
+    "holdout": 1600,
+    "seed_clusters": 100
+  },
+  "post_evaluation_change": "Exception accounting wrapper added after evaluation; successful trial algorithms unchanged. Holdout not rerun."
+}

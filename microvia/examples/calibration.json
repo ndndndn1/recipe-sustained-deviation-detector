@@ -1,0 +1,731 @@
+{
+  "context": {
+    "geometry": "synthetic",
+    "bath_id": "simulation",
+    "instrument": "oracle-pair",
+    "quality_metric": "height_fill_ratio",
+    "unit": "ratio"
+  },
+  "measurements": [
+    {
+      "measurement_id": "cal-0",
+      "replicate_group": "rep-0",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:00:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-1",
+      "replicate_group": "rep-0",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:01:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-2",
+      "replicate_group": "rep-1",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:02:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-3",
+      "replicate_group": "rep-1",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:03:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-4",
+      "replicate_group": "rep-2",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:04:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-5",
+      "replicate_group": "rep-2",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:05:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-6",
+      "replicate_group": "rep-3",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:06:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-7",
+      "replicate_group": "rep-3",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:07:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-8",
+      "replicate_group": "rep-4",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:08:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-9",
+      "replicate_group": "rep-4",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:09:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-10",
+      "replicate_group": "rep-5",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:10:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-11",
+      "replicate_group": "rep-5",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:11:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-12",
+      "replicate_group": "rep-6",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:12:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-13",
+      "replicate_group": "rep-6",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:13:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-14",
+      "replicate_group": "rep-7",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:14:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-15",
+      "replicate_group": "rep-7",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:15:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-16",
+      "replicate_group": "rep-8",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:16:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-17",
+      "replicate_group": "rep-8",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:17:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-18",
+      "replicate_group": "rep-9",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:18:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-19",
+      "replicate_group": "rep-9",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:19:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-20",
+      "replicate_group": "rep-10",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:20:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-21",
+      "replicate_group": "rep-10",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:21:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-22",
+      "replicate_group": "rep-11",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:22:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-23",
+      "replicate_group": "rep-11",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:23:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-24",
+      "replicate_group": "rep-12",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:24:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-25",
+      "replicate_group": "rep-12",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:25:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-26",
+      "replicate_group": "rep-13",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:26:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-27",
+      "replicate_group": "rep-13",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:27:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-28",
+      "replicate_group": "rep-14",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:28:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-29",
+      "replicate_group": "rep-14",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:29:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-30",
+      "replicate_group": "rep-15",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:30:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-31",
+      "replicate_group": "rep-15",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:31:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-32",
+      "replicate_group": "rep-16",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:32:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-33",
+      "replicate_group": "rep-16",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:33:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-34",
+      "replicate_group": "rep-17",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:34:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-35",
+      "replicate_group": "rep-17",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:35:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-36",
+      "replicate_group": "rep-18",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:36:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-37",
+      "replicate_group": "rep-18",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:37:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-38",
+      "replicate_group": "rep-19",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:38:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.915,
+      "reference": 0.9
+    },
+    {
+      "measurement_id": "cal-39",
+      "replicate_group": "rep-19",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-01T00:39:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.92,
+      "reference": 0.9
+    }
+  ]
+}

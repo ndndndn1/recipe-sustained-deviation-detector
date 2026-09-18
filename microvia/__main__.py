@@ -15,6 +15,7 @@ def main():
         "command",
         choices=[
             "validate",
+            "calibrate",
             "analyze",
             "plan-experiments",
             "benchmark",
@@ -27,8 +28,45 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--lot")
     parser.add_argument("--geometry")
+    parser.add_argument(
+        "--strategy",
+        choices=["bounded-design", "uniform", "random", "adaptive", "conservative"],
+        default="bounded-design",
+    )
+    parser.add_argument(
+        "--recommendation-policy",
+        choices=["raw", "fixed-margin", "calibrated-margin"],
+        default="raw",
+    )
+    parser.add_argument("--calibration", type=Path)
     args = parser.parse_args()
-    if args.command == "robust-benchmark":
+    if args.strategy == "bounded-design" and (
+        args.calibration or args.recommendation_policy != "raw"
+    ):
+        parser.error("recommendation options require an explicit research strategy")
+    if args.command == "calibrate":
+        from .calibration import calibrate
+
+        if not args.input:
+            parser.error("--input required")
+        result = calibrate(json.loads(args.input.read_text()))
+    elif (
+        args.command in ("plan-experiments", "report")
+        and args.strategy != "bounded-design"
+    ):
+        from .calibration import plan_measured
+
+        if not args.input:
+            parser.error("--input required")
+        result = plan_measured(
+            json.loads(args.input.read_text()),
+            json.loads(args.calibration.read_text()) if args.calibration else None,
+            args.strategy,
+            args.recommendation_policy,
+        )
+        if args.command == "report":
+            result = {"strata": [], "research_recommendation": result}
+    elif args.command == "robust-benchmark":
         from .robust_benchmark import run as robust_run
 
         result = robust_run()

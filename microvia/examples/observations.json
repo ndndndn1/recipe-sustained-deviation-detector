@@ -1,0 +1,88 @@
+{
+  "context": {
+    "geometry": "synthetic",
+    "bath_id": "simulation",
+    "instrument": "oracle-pair",
+    "quality_metric": "height_fill_ratio",
+    "unit": "ratio"
+  },
+  "drift_detected": false,
+  "measurements": [
+    {
+      "measurement_id": "obs-0",
+      "replicate_group": "rep-0",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-02T00:00:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.9,
+      "condition": [
+        0.0,
+        0
+      ],
+      "duration": 100
+    },
+    {
+      "measurement_id": "obs-1",
+      "replicate_group": "rep-0",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-02T00:01:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.905,
+      "condition": [
+        0.5,
+        0
+      ],
+      "duration": 95
+    },
+    {
+      "measurement_id": "obs-2",
+      "replicate_group": "rep-1",
+      "context": {
+        "geometry": "synthetic",
+        "bath_id": "simulation",
+        "instrument": "oracle-pair",
+        "quality_metric": "height_fill_ratio",
+        "unit": "ratio"
+      },
+      "calibration_source": "synthetic reference only",
+      "measured_at": "2026-01-02T00:02:00+00:00",
+      "bath_age": 0,
+      "temperature": 20,
+      "agitation": 1,
+      "observed": 0.91,
+      "condition": [
+        1.0,
+        0
+      ],
+      "duration": 90
+    }
+  ],
+  "candidate_conditions": [
+    [
+      0.25,
+      0
+    ],
+    [
+      0.75,
+      0
+    ]
+  ]
+}
